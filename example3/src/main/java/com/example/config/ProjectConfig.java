@@ -10,20 +10,21 @@ import com.example.beans.Vehicle;
 public class ProjectConfig {
 
 
-    @Bean
-    @Primary
+    @Bean(name = "AudiVehicle")
     Vehicle vehicle1(){
         var veh=new Vehicle();
         veh.setName("Audi 8");
         return veh;
     }
 
-    @Bean
+    @Bean(value = "MercedesVehicle")
     Vehicle vehicle2(){
         var veh=new Vehicle();
         veh.setName("Mercedes");
         return veh;
-    }@Bean
+    }
+    
+    @Bean("PorcheVehicle")
     Vehicle vehicle3(){
         var veh=new Vehicle();
         veh.setName("Porche");

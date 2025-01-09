@@ -5,7 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.example.beans.Vehicle;
 import com.example.config.ProjectConfig;
 
-public class Example2 {
+public class Example3 {
     // @SuppressWarnings("resource")
     public static void main(String[] args) {
         Vehicle vehicle=new Vehicle();
@@ -24,11 +24,6 @@ public class Example2 {
          * @throws NoSuchBeanDefinitionException if there is no such bean definition
          */
 
-
-        // use @Primary annotation to remove the ambuigity
-        var veh1=context.getBean(Vehicle.class);
-        System.out.println(veh1.getName());
-
         
         /**
          * Return an instance, which may be shared or independent, of the specified bean.
@@ -37,7 +32,13 @@ public class Example2 {
          * @return an instance of the bean (never {@code null})
          * @throws NoSuchBeanDefinitionException if there is no such bean definition
          */
-        var veh=context.getBean("vehicle2",Vehicle.class);
+        var veh=context.getBean("AudiVehicle",Vehicle.class);
         System.out.println("Name of vehicle using spring context is : "+veh.getName());
+
+        var veh1=context.getBean("PorcheVehicle",Vehicle.class);
+        System.out.println("Name of vehicle using spring context is : "+veh1.getName());
+
+        var veh2=context.getBean("MercedesVehicle",Vehicle.class);
+        System.out.println("Name of vehicle using spring context is : "+veh2.getName());
     }
 }
