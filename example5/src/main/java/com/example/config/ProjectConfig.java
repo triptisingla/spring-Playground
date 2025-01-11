@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
  *                                       beans package and register them
  *                                       in the spring's application
  *                                       context.
- * @ComponentScan is a stereotype annotation
  */
 @ComponentScan("com.example.beans")
 public class ProjectConfig {
