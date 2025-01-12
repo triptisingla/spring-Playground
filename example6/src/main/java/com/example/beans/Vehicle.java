@@ -3,6 +3,7 @@ package com.example.beans;
 import org.springframework.stereotype.Component;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 
 /**
  * Indicates that an annotated class is a "component". Such classes are
@@ -32,4 +33,8 @@ public class Vehicle {
         this.name="Honda";
     }
     
+    @PreDestroy
+    public void destroy(){
+        System.out.println("Destroying Vehicle Bean");
+    }
 }
