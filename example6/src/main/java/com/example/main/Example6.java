@@ -28,6 +28,11 @@ public class Example6 {
         System.out.println(veh.getName());
         veh.helloWorld();
 
+        var veh2=context.getBean(Vehicle.class);
+        veh2.setName("Bugatti");
+        System.out.println(veh.getName());
+        System.out.println(veh2.getName());
+
         context.close();
     }
 }
