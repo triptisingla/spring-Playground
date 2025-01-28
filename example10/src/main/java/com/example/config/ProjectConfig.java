@@ -25,10 +25,10 @@ public class ProjectConfig {
      * Assign a vehicle to the person by calling the function that is annotated with @bean annotation.
      */
     @Bean
-    public Person person() {
+    public Person person(Vehicle vehicle) {
         Person person = new Person();
         person.setName("Lucy");
-        person.setVehicle(vehicle());
+        person.setVehicle(vehicle);
         return person;
     }
 
