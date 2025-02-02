@@ -16,10 +16,8 @@ public class Person {
      * Represents an instance of a Vehicle object associated with the Person class.
      * Automatically injected by the Spring Framework using the @Autowired annotation.
      */
-    @Autowired(required = false)
+//    @Autowired(required = false)
     private Vehicle vehicle;
-
-//    You cannot use `final` with `@Autowired` for field injection because Spring uses reflection to inject the dependency after the object is created. However, `final` fields must be assigned during object creation, making the two incompatible
 
 
 
@@ -40,7 +38,7 @@ public class Person {
         return vehicle;
     }
 
-    
+    @Autowired
     public void setVehicle(Vehicle vehicle){
         this.vehicle=vehicle;
     }
