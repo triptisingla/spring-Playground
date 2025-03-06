@@ -14,7 +14,7 @@ public class Example14 {
         
         var person=context.getBean(Person.class);
 
-        System.out.println("Person name : "+person.getName());
+        System.out.println("Person name 1 : "+person.getName());
         System.out.println("Person's vehicle name 1 : "+person.getVehicle());
 
         context.close();
