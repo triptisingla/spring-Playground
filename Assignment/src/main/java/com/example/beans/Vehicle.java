@@ -32,6 +32,9 @@ public class Vehicle {
         return "Vehicle [name=" + name + " \n sound = "+vehServ.playSound()+" \n Speed = "+vehServ.isSpeed()+"]";
 
     }
+    public VehicleServices getVehicleServices(){
+        return vehServ;
+    }
 
 
 }

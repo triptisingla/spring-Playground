@@ -14,8 +14,9 @@ public class Assignment {
         var person=context.getBean(Person.class);
 
         System.out.println("Person name 1 : "+person.getName());
-        System.out.println("Person's vehicle name 1 : "+person.getVehicle());
-
+//        System.out.println("Person's vehicle name 1 : "+person.getVehicle());
+        System.out.println(person.getVehicle().getVehicleServices().isSpeed());
+        System.out.println(person.getVehicle().getVehicleServices().playSound());
         context.close();
     }
 }

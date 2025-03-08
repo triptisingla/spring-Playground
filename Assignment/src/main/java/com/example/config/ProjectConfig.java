@@ -64,6 +64,7 @@ public class ProjectConfig {
         return tyre;
     }
 
+    @Primary
     @Bean
     TyreClass MichelinTyres(){
         var tyre=new TyreClass();
@@ -79,6 +80,7 @@ public class ProjectConfig {
         return speaker;
     }
 
+    @Primary
     @Bean
     SpeakerClass BoseSpeakers(){
         var speaker=new SpeakerClass();

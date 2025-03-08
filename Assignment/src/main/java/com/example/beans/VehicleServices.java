@@ -13,8 +13,14 @@ public class VehicleServices {
 //    @Autowired
     public SpeakerClass speaker;
 
+//    @Autowired
+//    public  VehicleServices(@Qualifier("MichelinTyres") TyreClass tyre, @Qualifier("SonySpeakers") SpeakerClass speaker){
+//        this.tyre=tyre;
+//        this.speaker=speaker;
+//    }
+//
     @Autowired
-    public  VehicleServices(@Qualifier("MichelinTyres") TyreClass tyre, @Qualifier("SonySpeakers") SpeakerClass speaker){
+    public  VehicleServices(TyreClass tyre, SpeakerClass speaker){
         this.tyre=tyre;
         this.speaker=speaker;
     }
