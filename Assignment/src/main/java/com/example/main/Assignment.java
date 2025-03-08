@@ -15,8 +15,8 @@ public class Assignment {
 
         System.out.println("Person name 1 : "+person.getName());
 //        System.out.println("Person's vehicle name 1 : "+person.getVehicle());
-        System.out.println(person.getVehicle().getVehicleServices().isSpeed());
-        System.out.println(person.getVehicle().getVehicleServices().playSound());
+        person.getVehicle().getVehicleServices().moveVehicle();
+        person.getVehicle().getVehicleServices().playMusic();
         context.close();
     }
 }

@@ -1,23 +1,25 @@
 package com.example.beans;
 
+import com.example.services.VehicleServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component("vehicleBean")
 public class Vehicle {
 
-    public Vehicle() {
+    private String name="Toyota";
+    private VehicleServices vehicleServices;
+
+    @Autowired
+    public Vehicle(VehicleServices vehicleServices) {
         System.out.println("Vehicle Bean Created");
+        this.vehicleServices=vehicleServices;
     }
 
-    private String name="Toyota";
 
     public String getName() {
         return name;
     }
-
-    @Autowired
-    public VehicleServices vehServ;
 
     public void setName(String name) {
         this.name = name;
@@ -27,13 +29,13 @@ public class Vehicle {
         System.out.println("Hello World");
     }
 
-    @Override
-    public String toString() {
-        return "Vehicle [name=" + name + " \n sound = "+vehServ.playSound()+" \n Speed = "+vehServ.isSpeed()+"]";
-
-    }
+//    @Override
+//    public String toString() {
+//        return "Vehicle [name=" + name + " \n sound = "+vehicleServices.speaker.makeSound()+" \n Speed = "+vehicleServices.tyre.rotate()+"]";
+//
+//    }
     public VehicleServices getVehicleServices(){
-        return vehServ;
+        return vehicleServices;
     }
 
 
