@@ -1,5 +1,9 @@
 package com.example.beans;
 
+interface Tyre{
+    String speed();
+}
+
 public class TyreClass implements Tyre {
     private String model;
 

@@ -1,5 +1,6 @@
 package com.example.config;
 
+import com.example.beans.SpeakerClass;
 import com.example.beans.TyreClass;
 import org.springframework.context.annotation.*;
 
@@ -59,8 +60,30 @@ public class ProjectConfig {
     @Bean
     TyreClass BridgeStoneTyres(){
         var tyre=new TyreClass();
-        tyre.setmodel("Bose");
+        tyre.setmodel("BridgeStone");
         return tyre;
+    }
+
+    @Bean
+    TyreClass MichelinTyres(){
+        var tyre=new TyreClass();
+        tyre.setmodel("Michelin");
+        return tyre;
+    }
+
+
+    @Bean
+    SpeakerClass SonySpeakers(){
+        var speaker=new SpeakerClass();
+        speaker.setCompany("Sony");
+        return speaker;
+    }
+
+    @Bean
+    SpeakerClass BoseSpeakers(){
+        var speaker=new SpeakerClass();
+        speaker.setCompany("Bose");
+        return speaker;
     }
 }
 
