@@ -11,7 +11,8 @@ import org.springframework.context.annotation.*;
  *                                       in the spring's application
  *                                       context.
  */
-@ComponentScan(basePackages = {"com.example.beans","com.example.implementation","com.example.services"})
+@ComponentScan(basePackages = {"com.example.implementation","com.example.services"})
+@ComponentScan(basePackageClasses = {com.example.beans.Vehicle.class,com.example.beans.Person.class})
 public class ProjectConfig {
 
 }
