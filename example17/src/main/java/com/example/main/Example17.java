@@ -35,3 +35,24 @@ public class Example17 {
 /**
  * We use Prototype scope when there is alot of modification required by beans inside their objects , to avoid race conditions in multithreading environment.
  */
+
+
+
+
+/**Singleton Scope
+1. This is the default scope inside Spring framework
+2. The same object instance will be returned every time we refer a bean inside the code
+3. We can configure to create the beans during the start up or when the first time referred
+4. Immutable objects can be ideal for Singleton scope
+5. Most commonly used scope
+ */
+
+
+/**
+ *  Prototype Scope
+ * 1. Need to explicitly configure using @Scope(BeanDefinition.SCOPE_PROTOTYPE)
+ * 2. New object instance will be returned every time we refer a bean inside the code
+ * 3. Spring always creates the new object when we try to refer the bean. No eager instantiation is possible
+ * 4. Mutable objects can be ideal for prototype scope
+ * 5. Very rarely used scope
+ */
