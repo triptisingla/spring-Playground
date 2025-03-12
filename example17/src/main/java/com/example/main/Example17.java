@@ -31,3 +31,7 @@ public class Example17 {
  * The vehicleServices bean is created 3 time even when i call it 2 times explicitly
  * bcz 1 time it is created by vehicle bean. inside which I am autowiring it. Vehicle bean is singleton, so no matter how many times I inject it inside it, it will have only 1 instance of VehicleService bean
  * */
+
+/**
+ * We use Prototype scope when there is alot of modification required by beans inside their objects , to avoid race conditions.
+ */
