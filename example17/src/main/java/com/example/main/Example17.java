@@ -33,5 +33,5 @@ public class Example17 {
  * */
 
 /**
- * We use Prototype scope when there is alot of modification required by beans inside their objects , to avoid race conditions.
+ * We use Prototype scope when there is alot of modification required by beans inside their objects , to avoid race conditions in multithreading environment.
  */
