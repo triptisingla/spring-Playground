@@ -12,7 +12,7 @@ import com.example.beans.Vehicle;
 public class Example8 {
     // @SuppressWarnings("resource")
     public static void main(String[] args) {
-        @SuppressWarnings("resource")
+//        @SuppressWarnings("resource")
         var context = new ClassPathXmlApplicationContext("beans.xml");
 
         Vehicle veh=context.getBean(Vehicle.class);
