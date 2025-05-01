@@ -1,6 +1,7 @@
 package com.example.Services;
 
 import com.example.classes.Song;
+import com.example.interfaces.LogAspect;
 import com.example.interfaces.Speakers;
 import com.example.interfaces.Tyres;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ public class VehicleServices {
     }
 
 
-
+    @LogAspect
     public String playMusic(boolean vehicleStarted, Song song){
 //        Instant start=Instant.now();
 //
